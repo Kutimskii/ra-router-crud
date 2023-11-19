@@ -1,24 +1,21 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route,Routes } from 'react-router-dom';
+import HomePage from './components/pages/HomePage';
+import CreatePostPage from './components/pages/CreatePostPage';
+import ViewPage from './components/pages/ViewPage';
 import './App.css';
-
+import ChangePostPage from './components/pages/ChangePostPage';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+      <Routes>
+        <Route index element={<HomePage/>}></Route>
+        <Route path='/posts/new' exact element={<CreatePostPage/>}></Route>
+        <Route path='/posts/:id' exact element={<ViewPage/>}></Route>
+        <Route path='/posts/change/:id' exact element={<ChangePostPage/>}></Route>
+      </Routes>
+    </Router>
+    </>
   );
 }
 

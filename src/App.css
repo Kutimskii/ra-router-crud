@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+body{
+  padding: 30px;
+  background-color: rgb(166, 91, 236);
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.btn_add_post_wrap{
+  display: flex;
+  justify-content: end;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.btn_add_post{
+  appearance: none;
+  background-color: aqua;
+border: 2px solid rebeccapurple;
+border-radius: 5px;
+}
+.btn_add_post:hover{
+cursor: pointer;
+background-color: rosybrown;
+}
+.btn_add_post:active,
+.post_change_btn:active,
+.post_delete_btn:active{
+  background-color: red;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.create_post_wrap{
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 2px solid rebeccapurple;
+  border-radius: 5px;
+  position: relative;
 }
-
-.App-link {
-  color: #61dafb;
+.close_post_btn{
+  position: absolute;
+  top:-25px;
+  right: -20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.create_post_input{
+  margin:20px;
   }
-  to {
-    transform: rotate(360deg);
-  }
+.posts_container{
+  list-style-type: none;
+  margin: 0;
+}
+.post{
+  margin-bottom: 10px;
+  border: 2px solid rgb(169, 210, 45);
+  background-color: rgb(244, 223, 223);
+  border-radius: 5px;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.post_created{
+  color: rgb(61, 58, 58);
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+}
+.post_change_btn_wrap{
+  display: flex;
+  justify-content: end;
+}
+.post_change_btn,
+.post_delete_btn{
+  appearance: none;
+  background-color: aqua;
+border: 2px solid rebeccapurple;
+border-radius: 5px;
+}
+.post_change_btn:hover,
+.post_delete_btn:hover{
+  cursor: pointer;
+background-color: rosybrown;
 }
